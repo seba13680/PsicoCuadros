@@ -1,0 +1,164 @@
+<html>
+<title>
+PsicoCuadros
+</title>
+<head>
+<style>
+#divUno
+{
+	border:40px solid Blue;
+	border-color: Blue;
+	background-color: Blue;
+	height:500px; 
+	width:500px;
+    position: absolute;
+	font-family: Verdana;
+	font-color: White;
+}
+
+#divDos
+{
+	border:40px solid Blue;
+	border-color: Blue;
+	background-color: Bluelue;
+	height:60%; 
+	width:60%;
+    position: absolute;
+	padding-bottom:5%;
+	padding-top: 5%;
+	padding-right: 5%;
+	padding-left: 5%;
+	margin-top:7%;
+	margin-left: 7%;
+}
+#divTres
+{
+	border:30px solid Blue;
+	border-color: Blue;
+	background-color: Blue;
+	height:60%; 
+	width:60%;
+	position: absolute;
+	padding-bottom:5%;
+	padding-top: 5%;
+	padding-right: 5%;
+	padding-left: 5%;
+	margin-top:-1%;
+	margin-left: -1%;;
+}
+#divCuatro
+{
+	border:20px solid Blue;
+	border-color: Blue;
+	background-color: Blue;
+    height:60%; 
+	width:60%;
+    position: absolute;
+	padding-bottom:5%;
+	padding-top: 5%;
+	padding-right: 5%;
+	padding-left: 5%;
+	margin-top:5%;
+	margin-left: 5%; 
+	padding:.10em;
+}
+#divCinco
+{
+	border:20px solid Blue;
+	border-color: Blue;
+	background-color: Blue;
+    height:40%; 
+	width:40%;
+    position: absolute;
+	padding-bottom:5%;
+	padding-top: 5%;
+	padding-right: 5%;
+	padding-left: 5%;
+	margin-top:15%;
+	margin-left: 15%; 
+	padding:.10em;
+}
+#divSeis
+{
+	border:10px solid Blue;
+	border-color: Blue;
+	background-color: Blue;
+    height:25%; 
+	width:25%;
+    position: absolute;
+	padding-bottom:5%;
+	padding-top: 5%;
+	padding-right: 5%;
+	padding-left: 5%;
+	margin-top:20%;
+	margin-left: 20%; 
+	padding:.10em;
+	text-align: center;
+	text-color: White;
+}
+
+</style>
+</head>
+
+<body>
+<button onclick="location.reload()">Reset</button>
+</br>
+<div id="divUno" onclick="cambiaColorNumero()">
+	<div id="divDos">
+		<div id="divTres">
+			<div id="divCuatro">
+				<div id="divCinco">
+					<div id="divSeis">
+						1
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<script>
+
+function cambiaColorNumero()
+{
+	var Colores = ["Blue", "Fuchsia", "Olive", "Maroon", "Lime", "Teal", "Aqua", "Silver", 
+					"Navy", "Red", "Green", "Gray", "Orange", "Violet", "Brown", "Purple", 
+					"Golden","Golden", "Purple", "Brown", "Violet", "Orange", "Gray", "Green", 
+					"Red", "Navy", "Silver", "Aqua", "Teal", "Lime", "Maroon", "Olive", "Fuchsia", "Blue", "Fuchsia", "Olive"]; // 36 colores
+		
+	var contador = parseInt(document.getElementById("divSeis").textContent);
+	 
+	if(!contador)
+		contador=1;
+	else 
+		contador++;
+		
+	divSeis.innerHTML = contador;
+	 
+	document.getElementById("divUno").style.borderColor = Colores[contador-11];
+	document.getElementById("divUno").style.backgroundColor = Colores[contador-10];
+	
+	document.getElementById("divDos").style.borderColor = Colores[contador-9];
+	document.getElementById("divDos").style.backgroundColor = Colores[contador-8];
+	
+	document.getElementById("divTres").style.borderColor = Colores[contador-7];
+	document.getElementById("divTres").style.backgroundColor = Colores[contador-6];
+	
+	document.getElementById("divCuatro").style.borderColor = Colores[contador-5];
+	document.getElementById("divCuatro").style.backgroundColor = Colores[contador-4];
+	
+	document.getElementById("divCinco").style.borderColor = Colores[contador-3];
+	document.getElementById("divCinco").style.backgroundColor = Colores[contador-2];
+	
+	document.getElementById("divSeis").style.borderColor = Colores[contador-1];
+	document.getElementById("divSeis").style.backgroundColor = Colores[contador];
+	
+	
+	if (contador > 36) 
+		contador = 1
+		divSeis.innerHTML = contador;
+	
+	
+}
+</script>
+</body>
+</html>
